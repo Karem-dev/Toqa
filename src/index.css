@@ -69,7 +69,7 @@ p {
 }
 
 body{
-  background-image: url(../public/assets/bg.jpg);
+  background-image: url(../public/assets/images/bg.jpg);
 
 }
 
@@ -513,7 +513,7 @@ a.menu-link { display: none; }
 /* Why Choosing Us */
 
 section.why-us {
-    background-image: url(../public/assets/bg.jpg);
+    background-image: url(../public/assets/images/bg.jpg);
     /* background-color: #172238; */
     background-repeat: no-repeat;
     background-size: cover;
@@ -653,7 +653,7 @@ section.why-us {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* background-image: url('../public/assets/bg.jpg');  */
+  /* background-image: url('../public/assets/images/bg.jpg');  */
   background-size: cover;
   background-position: center;
   z-index: 1000;
@@ -717,7 +717,7 @@ section.why-us {
 }
 
 section.coming-soon {
-  background-image: url(../public/assets/bg.jpg);
+  background-image: url(../public/assets/images/bg.jpg);
   background-repeat: no-repeat;
     background-size: cover;
     background-color: #172238;
@@ -891,7 +891,7 @@ section.coming-soon form button {
 /* Courses */
 
 section.courses {
-    background-image: url(../assets/choosing-bg.jpg);
+    background-image: url(../assets/images/choosing-bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #172238;
@@ -1541,7 +1541,7 @@ img.mfp-img {
 /* Contact */
 
 section.contact {
-    background-image: url(../assets/contact-bg.jpg);
+    background-image: url(../assets/images/contact-bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #172238;
@@ -1948,7 +1948,7 @@ footer p a:hover {
     width: 32px;
     height: 32px;
     margin: 0 auto;
-    background: url(../assets/loading.gif) no-repeat;
+    background: url(../assets/images/loading.gif) no-repeat;
   }
   
   .lb-nav {
@@ -1979,7 +1979,7 @@ footer p a:hover {
     width: 34%;
     left: 0;
     float: left;
-    background: url(../assets/prev.png) left 48% no-repeat;
+    background: url(../assets/images/prev.png) left 48% no-repeat;
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
     opacity: 0;
     -webkit-transition: opacity 0.6s;
@@ -1997,7 +1997,7 @@ footer p a:hover {
     width: 64%;
     right: 0;
     float: right;
-    background: url(../assets/next.png) right 48% no-repeat;
+    background: url(../assets/images/next.png) right 48% no-repeat;
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
     opacity: 0;
     -webkit-transition: opacity 0.6s;
@@ -2063,7 +2063,7 @@ footer p a:hover {
     width: 30px;
     height: 30px;
     margin-top: 15px;
-    background: url(../assets/close.png) top right no-repeat;
+    background: url(../assets/images/close.png) top right no-repeat;
     text-align: right;
     outline: none;
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);

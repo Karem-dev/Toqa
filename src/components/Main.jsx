@@ -14,7 +14,7 @@ function Main() {
   return (
     <section  data-aos="fade-in"  className="section main-banner" id="top hero" data-section="section1">
     <video autoPlay muted loop id="bg-video">
-      <source src="/assets/vedio.mp4" type="video/mp4" />
+      <source src="/assets/images/vedio.mp4" type="video/mp4" />
     </video>
 
     <div className="video-overlay header-text">

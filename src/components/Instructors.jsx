@@ -8,44 +8,44 @@ const instructors = [
   {
     id: 1,
     name: "Karem Mahmoud",
-    image: "/assets/me3.jpg",
+    image: "/assets/images/me3.jpg",
     bio: "Full stack web developer and instructor in software engineering",
     linkedin: "https://www.linkedin.com/in/karem-mahmoud-963b84262/",
     github: "https://github.com/karem880",
     website: "https://karemmahmouddev.netlify.app/",
-    cv:"/cvs/Karem Mahmoud Full Stack CV (1).pdf"
+    cv:"/assets/cvs/Karem Mahmoud Full Stack CV (1).pdf"
   },
   {
     id: 2,
     name: "Shady Mahmoud",
-    image: "/assets/shady.png",
+    image: "/assets/images/shady.png",
     bio: "Front End web developer and instructor in software engineering",
     linkedin: "https://www.linkedin.com/in/shady-mahmoud-600321293/",
     github: "https://github.com/Shady-Mahmoud9",
     website: "https://shady-portfolio-gamma.vercel.app/",
-    cv:"/cvs/Shady-Mahmoud-Abdelkader-FlowCV-Resume-20241220 (1).pdf"
+    cv:"/assets/cvs/Shady-Mahmoud-Abdelkader-FlowCV-Resume-20241220 (1).pdf"
 
   },
   {
     id: 3,
     name: "Mr. Mohamed AbdElsamiee",
-    image: "/assets/mohamed.png",
+    image: "/assets/images/mohamed.png",
     bio: "Senior and supervisor of the teaching staff, Department of Physics",
     linkedin: "https://www.linkedin.com/in/mohamed-abd-el-samea-491208121/",
     github: null,
     website: null,
-    cv:"/cvs/Mohamed Abd ELsamea-CV.pdf"
+    cv:"/assets/cvs/Mohamed Abd ELsamea-CV.pdf"
 
   },
   {
     id: 4,
     name: "Jana Mostafa",
-    image: "/assets/jana.jpg",
+    image: "/assets/images/jana.jpg",
     bio: "UI/UX developer, UI/UX designer, marketer",
     linkedin: "https://www.linkedin.com/in/jana-mostafa-246a91320",
     github: "https://github.com/Jana144-m",
     website: null,
-    cv:"/cvs/Jana Mostafa cv.pdf"
+    cv:"/assets/cvs/Jana Mostafa cv.pdf"
 
   },
 

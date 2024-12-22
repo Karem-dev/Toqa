@@ -46,7 +46,7 @@ const ComingSoonSection = () => {
     id="section3"
   >
     <div
-      className="container mx-auto bg-[url('/assets/1.png')] bg-cover rounded-xl p-8 md:p-12 lg:p-24 h-full"
+      className="container mx-auto bg-[url('/assets/images/1.png')] bg-cover rounded-xl p-8 md:p-12 lg:p-24 h-full"
       style={{
         backgroundSize: 'cover',
         backgroundPosition: 'center',

@@ -21,17 +21,17 @@ const WhyUsSection = () => {
   const tabsContent = [
     {
       title: "Best Education",
-      image: "/public/assets/1.png",
+      image: "/public/assets/images/1.png",
       description: "Grad School is a free educational HTML template with Bootstrap 4.5.2 CSS layout. Feel free to use it for educational or commercial purposes. You may want to make a little donation to TemplateMo. Please tell your friends about us. Thank you Grad School is a free educational HTML template with Bootstrap 4.5.2 CSS layout. Feel free to use it for educational or commercial purposes. You may want to make a little donation to TemplateMo. Please tell your friends about us. Thank youGrad School is a free educational HTML template with Bootstrap 4.5.2 CSS layout. Feel free to use it for educational or commercial purposes. You may want to make a little donation to TemplateMo. Please tell your friends about us. Thank youGrad School is a free educational HTML template with Bootstrap 4.5.2 CSS layout. Feel free to use it for educational or commercial purposes. You may want to make a little donation to TemplateMo. Please tell your friends about us. Thank you."
     },
     {
       title: "Top Management",
-      image: "/public/assets/1.png",
+      image: "/public/assets/images/1.png",
       description: " You can modify this HTML layout by editing contents and adding more pages as needed. Grad School is a free educational HTML template with Bootstrap 4.5.2 CSS layout. Feel free to use it for educational or commercial purposes. You may want to make a little donation to TemplateMo. Please tell your friends about us. Thank youGrad School is a free educational HTML template with Bootstrap 4.5.2 CSS layout. Feel free to use it for educational or commercial purposes. You may want to make a little donation to TemplateMo. Please tell your friends about us. Thank youGrad School is a free educational HTML template with Bootstrap 4.5.2 CSS layout. Feel free to use it for educational or commercial purposes. You may want to make a little donation to TemplateMo. Please tell your friends about us. Thank youGrad School is a free educational HTML template with Bootstrap 4.5.2 CSS layout. Feel free to use it for educational or commercial purposes. You may want to make a little donation to TemplateMo. Please tell your friends about us. Thank youSince this template has options to add dropdown menus, you can add many HTML pages."
     },
     {
       title: "Quality Meeting",
-      image: "/public/assets/1.png",
+      image: "/public/assets/images/1.png",
       description: "You are NOT allowed to redistribute this Grad School is a free educational HTML template with Bootstrap 4.5.2 CSS layout. Feel free to use it for educational or commercial purposes. You may want to make a little donation to TemplateMo. Please tell your friends about us. Thank youGrad School is a free educational HTML template with Bootstrap 4.5.2 CSS layout. Feel free to use it for educational or commercial purposes. You may want to make a little donation to TemplateMo. Please tell your friends about us. Thank youGrad School is a free educational HTML template with Bootstrap 4.5.2 CSS layout. Feel free to use it for educational or commercial purposes. You may want to make a little donation to TemplateMo. Please tell your friends about us. Thank youGrad School is a free educational HTML template with Bootstrap 4.5.2 CSS layout. Feel free to use it for educational or commercial purposes. You may want to make a little donation to TemplateMo. Please tell your friends about us. Thank you template ZIP file on any template collection website. However, you can use this template to convert into a specific theme for any CMS platform like WordPress."
     },
   ];

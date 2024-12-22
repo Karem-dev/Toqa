@@ -33,7 +33,7 @@ function App() {
         <div className="preloader">
           <div className="img">
             <img
-              src="/assets/1.png" 
+              src="/assets/images/1.png" 
               alt="Toqa Academy"
               className="preloader-image"
             />

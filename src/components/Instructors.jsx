@@ -13,7 +13,7 @@ const instructors = [
     linkedin: "https://www.linkedin.com/in/karem-mahmoud-963b84262/",
     github: "https://github.com/karem880",
     website: "https://karemmahmouddev.netlify.app/",
-    cv:"/public/cvs/Karem Mahmoud Full Stack CV (1).pdf"
+    cv:"/cvs/Karem Mahmoud Full Stack CV (1).pdf"
   },
   {
     id: 2,
@@ -23,7 +23,7 @@ const instructors = [
     linkedin: "https://www.linkedin.com/in/shady-mahmoud-600321293/",
     github: "https://github.com/Shady-Mahmoud9",
     website: "https://shady-portfolio-gamma.vercel.app/",
-    cv:"/public/cvs/Shady-Mahmoud-Abdelkader-FlowCV-Resume-20241220 (1).pdf"
+    cv:"/cvs/Shady-Mahmoud-Abdelkader-FlowCV-Resume-20241220 (1).pdf"
 
   },
   {
@@ -34,7 +34,7 @@ const instructors = [
     linkedin: "https://www.linkedin.com/in/mohamed-abd-el-samea-491208121/",
     github: null,
     website: null,
-    cv:"/public/cvs/Mohamed Abd ELsamea-CV.pdf"
+    cv:"/cvs/Mohamed Abd ELsamea-CV.pdf"
 
   },
   {
@@ -45,7 +45,7 @@ const instructors = [
     linkedin: "https://www.linkedin.com/in/jana-mostafa-246a91320",
     github: "https://github.com/Jana144-m",
     website: null,
-    cv:"/public/cvs/Jana Mostafa cv.pdf"
+    cv:"/cvs/Jana Mostafa cv.pdf"
 
   },
 

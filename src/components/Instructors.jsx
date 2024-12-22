@@ -8,7 +8,7 @@ const instructors = [
   {
     id: 1,
     name: "Karem Mahmoud",
-    image: "/public/images/me3.jpg",
+    image: "/public/assets/me3.jpg",
     bio: "Full stack web developer and instructor in software engineering",
     linkedin: "https://www.linkedin.com/in/karem-mahmoud-963b84262/",
     github: "https://github.com/karem880",
@@ -18,7 +18,7 @@ const instructors = [
   {
     id: 2,
     name: "Shady Mahmoud",
-    image: "/public/images/shady.png",
+    image: "/public/assets/shady.png",
     bio: "Front End web developer and instructor in software engineering",
     linkedin: "https://www.linkedin.com/in/shady-mahmoud-600321293/",
     github: "https://github.com/Shady-Mahmoud9",
@@ -29,7 +29,7 @@ const instructors = [
   {
     id: 3,
     name: "Mr. Mohamed AbdElsamiee",
-    image: "/public/images/mohamed.png",
+    image: "/public/assets/mohamed.png",
     bio: "Senior and supervisor of the teaching staff, Department of Physics",
     linkedin: "https://www.linkedin.com/in/mohamed-abd-el-samea-491208121/",
     github: null,
@@ -40,7 +40,7 @@ const instructors = [
   {
     id: 4,
     name: "Jana Mostafa",
-    image: "/public/images/jana.jpg",
+    image: "/public/assets/jana.jpg",
     bio: "UI/UX developer, UI/UX designer, marketer",
     linkedin: "https://www.linkedin.com/in/jana-mostafa-246a91320",
     github: "https://github.com/Jana144-m",

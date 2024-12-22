@@ -16,7 +16,7 @@ export default function ContactSection() {
   const whatsappLink = `https://wa.me/${phoneNumber.replace("+", "")}`; // صيغة رابط واتساب
 
   return (
-    <section data-aos="fade-in" id="location" className="bg-[url('./public/images/bg.jpg')] bg-cover bg-center py-12 text-white">
+    <section data-aos="fade-in" id="location" className="bg-[url('./public/assets/bg.jpg')] bg-cover bg-center py-12 text-white">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold mb-8 text-center">Location</h2>
         <div className="flex flex-col lg:flex-row lg:items-start lg:justify-center gap-12">

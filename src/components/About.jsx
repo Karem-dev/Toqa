@@ -37,7 +37,7 @@ const AboutUs = () => {
     <section
     id='about'
       data-aos="fade-up"
-      className="py-16 w-full bg-[url('/images/bg.jpg')] bg-cover bg-center"
+      className="py-16 w-full bg-[url('/assets/bg.jpg')] bg-cover bg-center"
     >
       <div className="w-full mx-auto px-6">
         <h2 className="text-4xl font-bold text-center text-white mb-8 hover:text-[#f5a425] transition-colors duration-300 ease-in-out transform cursor-pointer">
@@ -95,7 +95,7 @@ const AboutUs = () => {
 
           <div data-aos="fade-up" className="w-full xl:w-[40%] flex items-center justify-center">
             <img
-              src="/images/1.png"
+              src="/assets/1.png"
               className="w-[70%] mx-auto xl:w-full rounded-xl shadow-lg clippath transform transition-all duration-500 hover:scale-105"
               alt="Academy Image"
             />
@@ -115,7 +115,7 @@ const AboutUs = () => {
             onClick={() => setSelectedSection(null)} // Close modal on overlay click
           >
             <motion.div
-              className="bg-[url('./public/images/bg.jpg')] relative py-8 rounded-lg shadow-2xl text-white w-[90%] md:w-[40%] lg:w-[40%] shadow-slate-700"
+              className="bg-[url('./public/assets/bg.jpg')] relative py-8 rounded-lg shadow-2xl text-white w-[90%] md:w-[40%] lg:w-[40%] shadow-slate-700"
               variants={modalVariants}
               onClick={(e) => e.stopPropagation()} // Prevent closing modal when clicking inside
             >

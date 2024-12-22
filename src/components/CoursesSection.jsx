@@ -15,7 +15,7 @@ const CoursesSection = () => {
   const courses = [
     {
       id: 1,
-      image: "../public/assets/science.png",
+      image: "/assets/science.png",
       title: "science Fundamentals",
       description: "Master the basics of science with this comprehensive course, covering topics from classical mechanics to modern science principles.",
       taughtLanguages: ["English", "Arabic"], // science is taught in these languages
@@ -34,7 +34,7 @@ const CoursesSection = () => {
     },
     {
       id: 2,
-      image: "../public/assets/basic.jpg",
+      image: "/assets/basic.jpg",
       title: "Programming Basics",
       description: "Learn programming from scratch with easy-to-follow lessons covering variables, data types, control structures, and algorithms.",
       taughtLanguages: ["Python", "JavaScript"], // Programming taught in Python & JS
@@ -53,7 +53,7 @@ const CoursesSection = () => {
     },
     {
       id: 3,
-      image: "../public/assets/front.jpg",
+      image: "/assets/front.jpg",
       title: "Frontend Development",
       description: "Build modern, responsive websites using HTML, CSS, and JavaScript. Learn best practices for user interface design and interactivity.",
       taughtLanguages: ["HTML", "CSS", "JavaScript"], // Frontend taught in HTML, CSS, JS
@@ -73,7 +73,7 @@ const CoursesSection = () => {
     },
     {
       id: 4,
-      image: "../public/assets/back.png",
+      image: "/assets/back.png",
       title: "Backend Development",
       description: "Dive into server-side programming with Node.js, PHP, and more. Understand how to create powerful web servers and APIs.",
       taughtLanguages: ["Node.js", "PHP", "SQL"], // Backend taught in Node.js, PHP, SQL
@@ -93,7 +93,7 @@ const CoursesSection = () => {
     },
     {
       id: 5,
-      image: "../public/assets/ardiono.jpeg",
+      image: "/assets/ardiono.jpeg",
       title: "Arduino Programming",
       description: "Learn to program microcontrollers and build smart projects using Arduino. Perfect for beginners and electronics enthusiasts.",
       taughtLanguages: ["C", "Arduino IDE"], // Taught in C & Arduino IDE
@@ -113,7 +113,7 @@ const CoursesSection = () => {
     },
     {
       id: 6,
-      image: "../public/assets/ai.png",
+      image: "/assets/ai.png",
       title: "Artificial Intelligence",
       description: "Get started with machine learning and AI techniques. Understand algorithms like decision trees, neural networks, and deep learning.",
       taughtLanguages: ["Python", "TensorFlow", "Keras"], // Taught in Python, TensorFlow, Keras
@@ -143,7 +143,7 @@ const CoursesSection = () => {
   };
 
   return (
-    <section data-AOS="fade-down" id="courses" className="courses-section py-16 bg-[url('./public/assets/bg.jpg')] text-white">
+    <section data-AOS="fade-down" id="courses" className="courses-section py-16 bg-[url('/assets/bg.jpg')] text-white">
       <div className="container mx-auto px-6 lg:px-12">
         <h2 className="text-4xl lg:text-5xl font-bold text-center mb-8">
           Explore Our Creative Courses
@@ -189,7 +189,7 @@ const CoursesSection = () => {
             onClick={() => setSelectedCourse(null)} // Close modal when clicking on overlay
           >
             <motion.div
-              className="bg-[url('./public/assets/bg.jpg')] bg-cover relative rounded-lg shadow-2xl shadow-blue-950 text-white w-[90%] md:w-[60%] lg:w-[50%]"
+              className="bg-[url('/assets/bg.jpg')] bg-cover relative rounded-lg shadow-2xl shadow-blue-950 text-white w-[90%] md:w-[60%] lg:w-[50%]"
               variants={modalVariants}
               onClick={(e) => e.stopPropagation()} // Prevent close when clicking inside the modal
             >

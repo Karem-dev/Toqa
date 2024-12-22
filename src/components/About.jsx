@@ -115,7 +115,7 @@ const AboutUs = () => {
             onClick={() => setSelectedSection(null)} // Close modal on overlay click
           >
             <motion.div
-              className="bg-[url('./public/assets/bg.jpg')] relative py-8 rounded-lg shadow-2xl text-white w-[90%] md:w-[40%] lg:w-[40%] shadow-slate-700"
+              className="bg-[url('/assets/bg.jpg')] relative py-8 rounded-lg shadow-2xl text-white w-[90%] md:w-[40%] lg:w-[40%] shadow-slate-700"
               variants={modalVariants}
               onClick={(e) => e.stopPropagation()} // Prevent closing modal when clicking inside
             >

@@ -18,23 +18,23 @@ export default function Footer() {
             <h3 className="text-lg font-semibold text-white mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="hover:text-indigo-500">
+                <a href="#hero" className="text-white hover:text-[#f5a425] duration-1000 cursor-pointer">
                   Home
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-indigo-500">
+                <a href="#about" className="text-white hover:text-[#f5a425] duration-1000 cursor-pointer">
                   About Us
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-indigo-500">
-                  Services
+                <a href="#courses" className="text-white hover:text-[#f5a425] duration-1000 cursor-pointer">
+                courses
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-indigo-500">
-                  Contact Us
+                <a href="#Our" className="text-white hover:text-[#f5a425] duration-1000 cursor-pointer">
+                  our team
                 </a>
               </li>
             </ul>
@@ -43,7 +43,7 @@ export default function Footer() {
           {/* Social Media */}
           <div className="flex-1">
             <h3 className="text-lg font-semibold text-white mb-4">Follow Us</h3>
-            <div className="flex gap-4">
+            <div className="flex gap-4 items-center justify-center">
               <a
                 href="#"
                 className="p-3 bg-indigo-500 text-white rounded-full hover:bg-indigo-600"

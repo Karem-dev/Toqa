@@ -10,6 +10,7 @@ import AboutUs from "./components/About";
 import CourseModal from "./components/Instructors";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import CustomerOpinionsSlider from "./components/Customers";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -56,9 +57,10 @@ function App() {
         <AboutUs/>
         {/* <WhyUsSection /> */}
         <CoursesSection />
-        <ComingSoonSection />
         <CourseModal/>
-        <Contact/>
+        <ComingSoonSection />
+        {/* <Contact/> */}
+        <CustomerOpinionsSlider/>
          <Footer /> 
       </div>
     </>

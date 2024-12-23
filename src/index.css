@@ -2363,4 +2363,44 @@ html[xmlns] .flexslider .slides {
     right: 10px;
   }
 }
- 
+ /* لتصميم شريط التمرير بالكامل */
+::-webkit-scrollbar {
+  width: 5px; /* عرض الشريط */
+  height: 12px; /* ارتفاع الشريط (للتمرير الأفقي) */
+  border-radius: 10px; /* زوايا دائرية */
+  background-color: #383838; /* لون خلفية الشريط */
+  border: none;
+}
+
+/* لون الخلفية لشريط التمرير */
+::-webkit-scrollbar-track {
+  background: #383838; /* لون خلفية الشريط */
+  border-radius: 10px; /* زوايا دائرية */
+}
+
+/* لون مقبض التمرير (Scroll Thumb) */
+::-webkit-scrollbar-thumb {
+  background: #f5a425; /* لون المقبض */
+  border-radius: 10px; /* زوايا دائرية */
+}
+
+/* تغيير لون المقبض عند التحويم */
+::-webkit-scrollbar-thumb:hover {
+  background: #e0891a; /* لون المقبض عند التحويم */
+}
+
+/* تغيير لون الشريط عند الضغط */
+::-webkit-scrollbar-thumb:active {
+  background: #c66d10; /* لون المقبض عند الضغط */
+}
+*{
+  scroll-behavior: smooth;
+  scroll-snap-type: proximity;
+}
+*::selection{
+  background-color: #f5a425;
+  color: #fff;
+  text-decoration: underline;
+
+  
+}

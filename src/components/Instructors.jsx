@@ -49,88 +49,84 @@ const instructors = [
 
   },
 
-  // يمكنك إضافة المزيد من المعلمين هنا
 ];
 
 const TeacherSlider = () => {
   return (
-    <div className="w-full max-w-7xl mx-auto py-16 px-4" id='instructors'>
-      <Swiper
-        spaceBetween={50}
-        slidesPerView={2}
-        
-        loop={true}
-        autoplay={true}
-      >
-        {instructors.map((instructor) => (
-          <SwiperSlide key={instructor.id}>
-            <motion.div
-              className="flex justify-center items-center"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.5 }}
-            >
-              <div className="bg-slate-800 rounded-xl w-[700px] relative  h-[390px] shadow-lg border border-white p-8 text-center">
-            
-
-                <img
-                  src={instructor.image}
-                  alt={instructor.name}
-                  className="w-32 h-32 object-cover rounded-full mx-auto mb-4 bg-white "
-                />
-                  <div className="flex justify-center flex-row md:flex-col gap-6 mb-4 md:absolute right-10 top-10">
-                  {instructor.linkedin && (
-                    <a
-                      href={instructor.linkedin}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-white bg-blue-500 p-2 flex items-center justify-center rounded-md  hover:text-gray-700 hover:scale-110 duration-1000"
-                    >
-                      <FaLinkedin size={24} />
-                    </a>
-                  )}
-                  {instructor.github && (
-                    <a
-                      href={instructor.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-white bg-slate-900 p-2 flex items-center justify-center rounded-md hover:text-gray-700 hover:scale-110 duration-1000"
-                    >
-                      <FaGithub size={24} />
-                    </a>
-                  )}
-                  {instructor.website && (
-                    <a
-                      href={instructor.website}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-white bg-green-500 p-2 flex items-center justify-center rounded-md  hover:text-gray-700 hover:scale-110 duration-1000 "
-                    >
-                      <FaGlobe size={24} />
-                    </a>
-                  )}
-                </div>
-                
-                <h3 className="text-2xl font-bold text-[#f5a425]  mb-2">
-                  {instructor.name}
-                </h3>
-                <p className="text-white text-lg mb-10 w-[70%]  mx-auto">{instructor.bio}</p>
-
-            
-
-                <a
-                    href={instructor.cv}
-                    download
-                    className="p-4 cursor-pointer mt-40   bg-yellow-500 text-white font-semibold rounded-lg hover:bg-yellow-600 transition duration-300"
+    <div className="w-full max-w-7xl mx-auto py-16 px-4" id="Our" >
+      <h1 className="text-3xl font-bold text-white hover:text-[#f5a425] mb-8 text-center m-20 " >OUR Instructors</h1>
+    <Swiper
+      spaceBetween={10}
+      slidesPerView={1} 
+      loop={true}
+      autoplay={{ delay: 3000 }}
+      breakpoints={{
+        1024: { slidesPerView: 2 }, 
+      }}
+    >
+      {instructors.map((instructor) => (
+        <SwiperSlide key={instructor.id}>
+          <motion.div
+            className="flex justify-center items-center mt-20"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+          >
+            <div className="bg-slate-800 cursor-grab rounded-xl w-full max-w-[400px] h-[350px] relative shadow-lg border border-white p-6 text-center">
+              <img
+                src={instructor.image}
+                alt={instructor.name}
+                className={instructor.id==1 ? "w-24 h-24 object-cover scale-105 rounded-full mx-auto mb-4 bg-white":"w-24 h-24 object-contain scale-105 rounded-full mx-auto mb-4 bg-white"}
+              />
+              <div className="flex justify-center gap-4 mb-4 md:absolute top-5 right-10 md:flex-col  ">
+                {instructor.linkedin && (
+                  <a
+                    href={instructor.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-white bg-blue-500 p-2 flex items-center justify-center rounded-md hover:text-gray-700 hover:scale-110 duration-500"
                   >
-                    Show CV
+                    <FaLinkedin size={20} />
                   </a>
+                )}
+                {instructor.github && (
+                  <a
+                    href={instructor.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-white bg-slate-900 p-2 flex items-center justify-center rounded-md hover:text-gray-700 hover:scale-110 duration-500"
+                  >
+                    <FaGithub size={20} />
+                  </a>
+                )}
+                {instructor.website && (
+                  <a
+                    href={instructor.website}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-white bg-green-500 p-2 flex items-center justify-center rounded-md hover:text-gray-700 hover:scale-110 duration-500"
+                  >
+                    <FaGlobe size={20} />
+                  </a>
+                )}
               </div>
-            </motion.div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
-    </div>
+              <h3 className="text-xl font-bold text-[#f5a425] mb-2">
+                {instructor.name}
+              </h3>
+              <p className="text-white text-sm mb-6">{instructor.bio}</p>
+              <a
+                href={instructor.cv}
+                download
+                className="p-3 bg-yellow-500 text-white font-semibold rounded-lg hover:bg-yellow-600 transition duration-300"
+              >
+                Show CV
+              </a>
+            </div>
+          </motion.div>
+        </SwiperSlide>
+      ))}
+    </Swiper>
+  </div>
   );
 };
 

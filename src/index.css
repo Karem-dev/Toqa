@@ -223,6 +223,15 @@ a.menu-link { display: none; }
 .main-menu li:first-child {
     margin-left: 0px;
 }
+html[lang="ar"] {
+  direction: rtl;
+  text-align: right;
+}
+
+html[lang="en"] {
+  direction: ltr;
+  text-align: left;
+}
 
 .main-menu li a {
     padding: 10px 15px;

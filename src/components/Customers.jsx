@@ -2,9 +2,11 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css'; // استيراد CSS لـ Swiper
 import { motion } from 'framer-motion';
 import { FaStar } from 'react-icons/fa'; // استيراد أيقونة النجمة
+import { useTranslation } from 'react-i18next';
 
 // بيانات آراء العملاء
 const customerOpinions = [
+
   {
     id: 1,
     name: "Ali",
@@ -57,9 +59,14 @@ const customerOpinions = [
 ];
 
 const CustomerOpinionsSlider = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="w-full max-w-7xl mx-auto py-16 px-4" id="opinions">
-      <h1 className="text-3xl font-bold text-white hover:text-[#f5a425] mb-8 text-center " >Our Rating</h1>
+      <h1 className="text-3xl font-bold text-white hover:text-[#f5a425] mb-8 text-center " >{t('rating.heading')} </h1>
+      <p className="text-lg  text-gray-500 mb-8 text-center leading-relaxed w-full mx-auto">
+        {t('rating.description')}
+      </p>
       <Swiper
         spaceBetween={10}
         slidesPerView={1}

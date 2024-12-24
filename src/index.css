@@ -17,7 +17,9 @@ body {
 }
 
 /* Basic */
-
+*{
+  cursor: grab;
+}
 a {
 	color: #3CF;
     text-decoration: none;

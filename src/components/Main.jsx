@@ -27,7 +27,7 @@ function Main() {
           <h2 dangerouslySetInnerHTML={{ __html: t('hero.company_name') }} /> {/* استخدام الترجمة مع <em> */}
           <div className="main-button">
             <div className="scroll-to-section">
-              <a href="#section2">{t('hero.discover_more')}</a> {/* استخدام الترجمة */}
+              <a href="#courses" className='hover:scale-105 hover:bg-amber-600 hover:text-white rounded-md  duration-1000 ' >{t('hero.discover_more')}</a> {/* استخدام الترجمة */}
             </div>
           </div>
         </div>

@@ -153,7 +153,7 @@ const CoursesSection = () => {
         <h2 className="text-4xl lg:text-5xl font-bold text-center mb-8">
           {t('courses.heading')} {/* Dynamic translation */}
         </h2>
-        <p className="text-center text-lg text-white/80 mb-12">
+        <p className="text-center text-lg text-gray-500 mb-12">
           {t('courses.description')} {/* Dynamic translation */}
         </p>
 
@@ -186,7 +186,7 @@ const CoursesSection = () => {
         <AnimatePresence>
           {selectedCourse && (
             <motion.div
-              className="fixed top-0 left-0 w-full h-full flex items-center justify-center"
+              className="fixed top-0 left-0 w-full h-full flex items-center bg-black/50 overflow-hidden justify-center"
               variants={modalVariants}
               initial="hidden"
               animate="visible"
@@ -207,7 +207,7 @@ const CoursesSection = () => {
                 <img
                   src={selectedCourse.image}
                   alt={selectedCourse.title}
-                  className="rounded-md mb-4 w-full h-[300px] object-cover"
+                  className="rounded-md mb-4 w-full h-auto  object-cover bg-[url('/assets/images/bg.jpg')]"
                 />
                 <div className="flex flex-col items-start justify-start p-10">
                   <h3 className="text-2xl text-start text-yellow-500 font-bold mb-2">

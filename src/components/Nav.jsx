@@ -24,10 +24,10 @@ export default function Nav() {
   };
 
   return (
-    <Disclosure as="nav" className="bg-gray-800">
+    <Disclosure as="nav" className="bg-gray-800 fixed top-0 w-full z-[9999]">
       {({ open }) => (
         <>
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 ">
             <div className="flex h-16 items-center justify-between">
               {/* Logo */}
               <div className="flex items-center">
@@ -39,7 +39,7 @@ export default function Nav() {
               </div>
 
               {/* Desktop Menu */}
-              <div className="hidden sm:flex items-center space-x-4">
+              <div className="hidden sm:flex items-center space-x-4 gap-3">
                 {navigation.map((item) => (
                   <a
                     key={item.name}
@@ -59,10 +59,10 @@ export default function Nav() {
                 {/* Language Switcher */}
                 <button
                   onClick={handleLanguageSwitch}
-                  className="text-gray-300 hover:text-white hover:bg-gray-700 rounded-md px-3 py-2 text-sm font-medium flex items-center"
+                  className="text-gray-300 gap-2  hover:text-white hover:bg-gray-700 rounded-md px-3 py-2 text-sm font-medium flex items-center"
                 >
                   <FaGlobe className="mr-2" />
-                  {language === 'en' ? 'English' : 'العربية'}
+                  {language === 'en' ? 'AR' : 'الانجليزيه'}
                 </button>
               </div>
 

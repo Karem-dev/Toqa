@@ -141,6 +141,43 @@ const resources = {
             "Implement AI models using Python."
           ]
         }
+      },
+      instructors: {
+        heading: 'Our Instructors',
+        description: 'Meet our experienced instructors who are passionate about teaching and helping students succeed in their computer science and science programs.',
+       showcv:" show cv",
+        instructor1: {
+          name: "Karem Mahmoud",
+          bio: "Full stack web developer and instructor in software engineering"
+        },
+        instructor2: {
+          name: "Shady Mahmoud",
+          bio: "Front End web developer and instructor in software engineering"
+        },
+        instructor3: {
+          name: "Mr Mohamed AbdElsamiee",
+          bio: "Senior and supervisor of the teaching staff, Department of Physics"
+        },
+        instructor4: {
+          name: "jana mostafa",
+          bio: "UI/UX developer, UI/UX designer, marketer"
+        }
+      },
+      comming:{
+        heading: 'Coming Soon',
+        title:"Take <em>any online course</em> by <span className='text-yellow-500'>500LE</span> only",
+        days:"days",
+        weeks:"weeks",
+        months:"months",
+        years:"years",
+        hours:"hours",
+        minutes:"minutes",
+        seconds:"seconds",
+        button:"Book Now",
+      },
+      rating:{
+        heading:"rating",
+        description:"look at our rating" 
       }
     }
   },
@@ -283,21 +320,56 @@ const resources = {
             "تنفيذ نماذج الذكاء الاصطناعي باستخدام Python."
           ]
         }
+      },
+      instructors: {
+        heading: 'Our Instructors',
+        description: "تعرف على مدرسينا ذوي الخبرة الذين لديهم شغف بالتدريس ومساعدة الطلاب على النجاح في برامج علوم الكمبيوتر والعلوم.",
+        showcv:"عرض السيره",
+        instructor1: {
+          name: "كارم محمود",
+          bio: "مطور ويب متكامل ومدرس في هندسة البرمجيات"
+        },
+        instructor2: {
+          name: "شادي محمود",
+          bio: "مطور واجهات الويب الأمامية ومدرس في هندسة البرمجيات"
+        },
+        instructor3: {
+          name: "أ. محمد عبد السميع",
+          bio: "مدير ومسؤول عن فريق التدريس، قسم الفيزياء"
+        },
+        instructor4: {
+          name: "جنى مصطفى",
+          bio: "مطور واجهات المستخدم، مصمم واجهات المستخدم، مسوق"
+        }
+      },
+      comming:{
+        heading: 'القادم',
+        title:"احجز أي دورة تدريبية الان ب  <span className='text-yellow-500'>500 جنيه مصري</span> فقط",
+        days:"ايام",
+        weeks:"اسابيع",
+        months:"شهور",
+        years:"سنوات",
+        hours:"ساعات",
+        minutes:"دقايق",
+        seconds:"ثواني",
+        button:" احجز الان",
+      },
+      rating:{
+        heading:"تقيماتنا",
+        description:"انظر حول تقيماتنا" 
       }
     }
   }
 };
 
-
-
-
-i18n.use(initReactI18next).init({
-  resources,
-  lng: 'en', // Default language
-  fallbackLng: 'en',
-  interpolation: {
-    escapeValue: false, // React already escapes by default
-  },
-});
+i18n
+  .use(initReactI18next)
+  .init({
+    resources,
+    lng: 'en', // default language
+    interpolation: {
+      escapeValue: false,
+    },
+  });
 
 export default i18n;

@@ -1,8 +1,12 @@
 import  { useState, useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { useTranslation } from 'react-i18next';
+
 
 const ComingSoonSection = () => {
+  const { t } = useTranslation();
+
   useEffect(() => {
     // Initialize AOS
     AOS.init({
@@ -58,26 +62,26 @@ const ComingSoonSection = () => {
       <div className="flex flex-col items-center space-y-8">
         {/* النص الرئيسي */}
         <h4 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-center">
-          Take <em>any online course</em> and win <span className='text-yellow-500'>500LE</span> for your next class
+          <h4 dangerouslySetInnerHTML={{ __html: t('comming.title') }} />
         </h4>
   
         {/* العد التنازلي */}
-        <div className="flex justify-center space-x-4">
+        <div className="flex justify-center space-x-4 gap-10">
           <div className="days flex flex-col items-center justify-center border-2 border-yellow-500 bg-yellow-400 p-3 rounded-md">
             <div className="value text-4xl md:text-5xl font-bold">{timeLeft.days}</div>
-            <span className="text-sm md:text-base">Days</span>
+            <span className="text-sm md:text-base">{t('comming.days')}</span>
           </div>
           <div className="hours flex flex-col items-center justify-center border-2 border-yellow-500 bg-yellow-400 p-3 rounded-md">
             <div className="value text-4xl md:text-5xl font-bold">{timeLeft.hours}</div>
-            <span className="text-sm md:text-base">Hours</span>
+            <span className="text-sm md:text-base">{t('comming.hours')}</span>
           </div>
           <div className="minutes flex flex-col items-center justify-center border-2 border-yellow-500 bg-yellow-400 p-3 rounded-md">
             <div className="value text-4xl md:text-5xl font-bold">{timeLeft.minutes}</div>
-            <span className="text-sm md:text-base">Minutes</span>
+            <span className="text-sm md:text-base">{t('comming.minutes')}</span>
           </div>
           <div className="seconds flex flex-col items-center justify-center border-2 border-yellow-500 bg-yellow-400 p-3 rounded-md">
             <div className="value text-4xl md:text-5xl font-bold">{timeLeft.seconds}</div>
-            <span className="text-sm md:text-base">Seconds</span>
+            <span className="text-sm md:text-base">{t('comming.seconds')}</span>
           </div>
         </div>
   
@@ -86,9 +90,9 @@ const ComingSoonSection = () => {
           href="https://wa.me/201023257791"
           target="_blank"
           rel="noopener noreferrer"
-          className="py-3 px-6 bg-yellow-500 text-white font-semibold rounded-lg hover:bg-yellow-700 transition duration-300"
+          className="py-3 px-6 bg-yellow-500 text-white font-semibold rounded-lg  hover:bg-yellow-700 transition duration-300"
         >
-          Get it now
+          {t('comming.button')}
         </a>
       </div>
     </div>

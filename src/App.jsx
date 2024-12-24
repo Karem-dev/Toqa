@@ -11,8 +11,15 @@ import CourseModal from "./components/Instructors";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import CustomerOpinionsSlider from "./components/Customers";
+import { useLanguage } from "./context/LanguageContext";
+
 
 function App() {
+  const { language } = useLanguage();
+
+useEffect(() => {
+  document.documentElement.lang = language; // تحديث السمة lang في الـ HTML
+}, [language]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {

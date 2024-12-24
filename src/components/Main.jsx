@@ -1,35 +1,39 @@
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
+import { useTranslation } from 'react-i18next'; // استيراد useTranslation
+
 function Main() {
+  const { t } = useTranslation(); // الحصول على الترجمة من i18next
+
   useEffect(() => {
     // Initialize AOS
     AOS.init({
-      duration: 1000, // Animation duration (in ms)
-      easing: 'ease-in-out', // Easing function
-      once: true, // Animation happens only once when scrolled into view
+      duration: 1000, // مدة الرسوم المتحركة (بالملي ثانية)
+      easing: 'ease-in-out', // دالة التسريع
+      once: true, // يحدث التحريك مرة واحدة فقط عند التمرير
     });
   }, []);
-  
-  return (
-    <section  data-aos="fade-in"  className="section main-banner" id="top hero" data-section="section1">
-    <video autoPlay muted loop id="bg-video">
-      <source src="/assets/images/vedio.mp4" type="video/mp4" />
-    </video>
 
-    <div className="video-overlay header-text">
-      <div className="caption">
-        <h6>wlcome we are </h6>
-        <h2><em>TOQ-A</em>-cademy</h2>
-        <div className="main-button">
-          <div className="scroll-to-section">
-            <a href="#section2">Discover more</a>
+  return (
+    <section data-aos="fade-in" className="section main-banner" id="top hero" data-section="section1">
+      <video autoPlay muted loop id="bg-video">
+        <source src="/assets/images/vedio.mp4" type="video/mp4" />
+      </video>
+
+      <div className="video-overlay header-text">
+        <div className="caption">
+          <h6>{t('hero.welcome')}</h6> {/* استخدام الترجمة */}
+          <h2 dangerouslySetInnerHTML={{ __html: t('hero.company_name') }} /> {/* استخدام الترجمة مع <em> */}
+          <div className="main-button">
+            <div className="scroll-to-section">
+              <a href="#section2">{t('hero.discover_more')}</a> {/* استخدام الترجمة */}
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-    )
+    </section>
+  );
 }
 
-export default Main
+export default Main;

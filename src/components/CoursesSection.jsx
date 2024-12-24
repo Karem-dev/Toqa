@@ -2,8 +2,12 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { useTranslation } from 'react-i18next';
+
 
 const CoursesSection = () => {
+  const { t } = useTranslation();
+
   useEffect(() => {
     // Initialize AOS
     AOS.init({
@@ -12,125 +16,126 @@ const CoursesSection = () => {
       once: true, // Animation happens only once when scrolled into view
     });
   }, []);
+
   const courses = [
     {
       id: 1,
       image: "/assets/images/Science.png",
-      title: "science Fundamentals",
-      description: "Master the basics of science with this comprehensive course, covering topics from classical mechanics to modern science principles.",
-      taughtLanguages: ["English", "Arabic"], // science is taught in these languages
+      title: t('courses.course1.title'),
+      description: t('courses.course1.description'),
+      taughtLanguages: ["English", "Arabic"],
       technologies: [
-        "Classical Mechanics",
-        "Electromagnetism",
-        "Quantum science",
-        "Relativity"
+        t('courses.course1.technologies.0'),
+        t('courses.course1.technologies.1'),
+        t('courses.course1.technologies.2'),
+        t('courses.course1.technologies.3')
       ],
       features: [
-        "In-depth explanations of fundamental science concepts.",
-        "Hands-on experiments and simulations.",
-        "Quizzes to test your understanding.",
-        "Access to a community of science enthusiasts."
+        t('courses.course1.features.0'),
+        t('courses.course1.features.1'),
+        t('courses.course1.features.2'),
+        t('courses.course1.features.3')
       ]
     },
     {
       id: 2,
       image: "/assets/images/basic.jpg",
-      title: "Programming Basics",
-      description: "Learn programming from scratch with easy-to-follow lessons covering variables, data types, control structures, and algorithms.",
-      taughtLanguages: ["Python", "JavaScript"], // Programming taught in Python & JS
+      title: t('courses.course2.title'),
+      description: t('courses.course2.description'),
+      taughtLanguages: ["Python", "JavaScript"],
       technologies: [
-        "Variables",
-        "Data Types",
-        "Control Structures",
-        "Algorithms"
+        t('courses.course2.technologies.0'),
+        t('courses.course2.technologies.1'),
+        t('courses.course2.technologies.2'),
+        t('courses.course2.technologies.3')
       ],
       features: [
-        "Step-by-step tutorials for beginners.",
-        "Projects to build your first applications.",
-        "Interactive coding exercises.",
-        "Code review and feedback from instructors."
+        t('courses.course2.features.0'),
+        t('courses.course2.features.1'),
+        t('courses.course2.features.2'),
+        t('courses.course2.features.3')
       ]
     },
     {
       id: 3,
       image: "/assets/images/front.jpg",
-      title: "Frontend Development",
-      description: "Build modern, responsive websites using HTML, CSS, and JavaScript. Learn best practices for user interface design and interactivity.",
-      taughtLanguages: ["HTML", "CSS", "JavaScript"], // Frontend taught in HTML, CSS, JS
+      title: t('courses.course3.title'),
+      description: t('courses.course3.description'),
+      taughtLanguages: ["C++", "Java"],
       technologies: [
-        "HTML5",
-        "CSS3",
-        "JavaScript",
-        "Responsive Design",
-        "UI/UX Principles"
+        t('courses.course3.technologies.0'),
+        t('courses.course3.technologies.1'),
+        t('courses.course3.technologies.2'),
+        t('courses.course3.technologies.3')
       ],
       features: [
-        "Learn the basics of HTML5, CSS3, and JavaScript.",
-        "Understand responsive web design techniques.",
-        "Build real-world web projects.",
-        "Learn about UI/UX design principles."
+        t('courses.course3.features.0'),
+        t('courses.course3.features.1'),
+        t('courses.course3.features.2'),
+        t('courses.course3.features.3')
       ]
     },
     {
       id: 4,
       image: "/assets/images/back.png",
-      title: "Backend Development",
-      description: "Dive into server-side programming with Node.js, PHP, and more. Understand how to create powerful web servers and APIs.",
-      taughtLanguages: ["Node.js", "PHP", "SQL"], // Backend taught in Node.js, PHP, SQL
+      title: t('courses.course4.title'),
+      description: t('courses.course4.description'),
+      taughtLanguages: ["JavaScript", "HTML", "CSS"],
       technologies: [
-        "Node.js",
-        "PHP",
-        "SQL Databases",
-        "NoSQL Databases",
-        "APIs"
+        t('courses.course4.technologies.0'),
+        t('courses.course4.technologies.1'),
+        t('courses.course4.technologies.2'),
+        t('courses.course4.technologies.3')
       ],
       features: [
-        "Master server-side programming with Node.js and PHP.",
-        "Learn how to work with databases (SQL & NoSQL).",
-        "Build APIs and integrate third-party services.",
-        "Secure your backend applications."
+        t('courses.course4.features.0'),
+        t('courses.course4.features.1'),
+        t('courses.course4.features.2'),
+        t('courses.course4.features.3')
       ]
     },
     {
       id: 5,
       image: "/assets/images/ardiono.jpeg",
-      title: "Arduino Programming",
-      description: "Learn to program microcontrollers and build smart projects using Arduino. Perfect for beginners and electronics enthusiasts.",
-      taughtLanguages: ["C", "Arduino IDE"], // Taught in C & Arduino IDE
+      title: t('courses.course5.title'),
+      description: t('courses.course5.description'),
+      taughtLanguages: ["Python", "R"],
       technologies: [
-        "Arduino IDE",
-        "Microcontrollers",
-        "Sensors",
-        "Actuators",
-        "Basic Electronics"
+        t('courses.course5.technologies.0'),
+        t('courses.course5.technologies.1'),
+        t('courses.course5.technologies.2'),
+        t('courses.course5.technologies.3')
       ],
       features: [
-        "Introduction to Arduino hardware and software.",
-        "Build hands-on projects like smart lights and sensors.",
-        "Learn basic electronics and circuit design.",
-        "Explore sensor and actuator integration."
+        t('courses.course5.features.0'),
+        t('courses.course5.features.1'),
+        t('courses.course5.features.2'),
+        t('courses.course5.features.3')
       ]
     },
     {
       id: 6,
       image: "/assets/images/ai.png",
-      title: "Artificial Intelligence",
-      description: "Get started with machine learning and AI techniques. Understand algorithms like decision trees, neural networks, and deep learning.",
-      taughtLanguages: ["Python", "TensorFlow", "Keras"], // Taught in Python, TensorFlow, Keras
+      title: t('courses.course6.title'),
+      description: t('courses.course6.description'),
+      taughtLanguages: ["Python", "JavaScript"],
       technologies: [
-        "Machine Learning",
-        "Neural Networks",
-        "Deep Learning",
-        "TensorFlow",
-        "Keras"
+        t('courses.course6.technologies.0'),
+        t('courses.course6.technologies.1'),
+        t('courses.course6.technologies.2'),
+        t('courses.course6.technologies.3')
       ],
       features: [
-        "Learn core machine learning algorithms.",
-        "Understand deep learning and neural networks.",
-        "Work with real-world datasets.",
-        "Implement AI models using Python."
+        t('courses.course6.features.0'),
+        t('courses.course6.features.1'),
+        t('courses.course6.features.2'),
+        t('courses.course6.features.3')
       ]
     },
+ 
+    
+   
+    // يمكن إضافة المزيد من الدورات حسب الحاجة
   ];
   
 
@@ -143,13 +148,13 @@ const CoursesSection = () => {
   };
 
   return (
-    <section data-AOS="fade-down" id="courses" className="courses-section py-16 bg-[url('/assets/images/bg.jpg')] text-white">
+    <section data-aos="fade-down" id="courses" className="courses-section py-16 bg-[url('/assets/images/bg.jpg')] text-white">
       <div className="container mx-auto px-6 lg:px-12">
         <h2 className="text-4xl lg:text-5xl font-bold text-center mb-8">
-          Explore Our Creative Courses
+          {t('courses.heading')} {/* Dynamic translation */}
         </h2>
         <p className="text-center text-lg text-white/80 mb-12">
-          Discover your passion and start learning today!
+          {t('courses.description')} {/* Dynamic translation */}
         </p>
 
         <motion.div
@@ -159,90 +164,90 @@ const CoursesSection = () => {
         >
           {courses.map((course, id) => (
             <motion.div
-            data-aos={course.id % 2 === 0 ? 'fade-up' : 'fade-down'}
-            key={id}
-              className="course-card relative hover:scale-110 duration-1000 bg-slate-900 h-[400px] text-white shadow-lg rounded-lg overflow-hidden  transition-transform cursor-pointer"
+              data-aos={course.id % 2 === 0 ? 'fade-up' : 'fade-down'}
+              key={id}
+              className="course-card relative hover:scale-110 duration-1000 bg-slate-900 h-[400px] text-white shadow-lg rounded-lg overflow-hidden transition-transform cursor-pointer"
               onClick={() => setSelectedCourse(course)}
             >
               <img
                 src={course.image}
                 alt={course.title}
-                className="h-full w-full object-cover  hover:scale-110 duration-1000 z-0"
+                className="h-full w-full object-cover hover:scale-110 duration-1000 z-0"
               />
               <div className="p-6 absolute bottom-0 left-[2%] w-full">
                 <h3 className="text-2xl font-bold mb-2">{course.title}</h3>
-                <p className="text-yellow-600 text-lg mt-4"> click for more details</p>
+                <p className="text-yellow-600 text-lg mt-4">click for more details</p>
               </div>
             </motion.div>
           ))}
         </motion.div>
 
-        {/* نافذة منبثقة */}
+        {/* Modal */}
         <AnimatePresence>
-        {selectedCourse && (
-          <motion.div
-            className="fixed top-0 left-0 w-full h-full flex items-center justify-center "
-            variants={modalVariants}
-            initial="hidden"
-            animate="visible"
-            exit="exit"
-            onClick={() => setSelectedCourse(null)} // Close modal when clicking on overlay
-          >
+          {selectedCourse && (
             <motion.div
-              className="bg-[url('/assets/images/bg.jpg')] bg-cover relative rounded-lg shadow-2xl shadow-blue-950 text-white w-[90%] md:w-[60%] lg:w-[50%]"
+              className="fixed top-0 left-0 w-full h-full flex items-center justify-center"
               variants={modalVariants}
-              onClick={(e) => e.stopPropagation()} // Prevent close when clicking inside the modal
+              initial="hidden"
+              animate="visible"
+              exit="exit"
+              onClick={() => setSelectedCourse(null)} // Close modal when clicking on overlay
             >
-              {/* Close button */}
-              <button
-                onClick={() => setSelectedCourse(null)}
-                className="absolute right-5 top-5 bg-white p-1 w-10 rounded-md text-red-600 text-2xl z-[999]"
+              <motion.div
+                className="bg-[url('/assets/images/bg.jpg')] bg-cover relative rounded-lg shadow-2xl shadow-blue-950 text-white w-[90%] md:w-[60%] lg:w-[50%]"
+                variants={modalVariants}
+                onClick={(e) => e.stopPropagation()} // Prevent close when clicking inside the modal
               >
-                &times;
-              </button>
-              <img
-                src={selectedCourse.image}
-                alt={selectedCourse.title}
-                className="rounded-md mb-4 w-full h-[300px] object-cover"
-              />
-              <div className="flex flex-col items-start justify-start p-10">
-                <h3 className="text-2xl text-start text-yellow-500 font-bold mb-2">
-                  {selectedCourse.title}
-                </h3>
-                <p className="text-white text-lg ">{selectedCourse.description}</p>
-
-                {/* Display taught languages */}
-                <div className="text-white w-full text-start mb-4">
-                  <strong className="text-yellow-500">technologies we teatch : </strong>
-                  <ul className="list-disc pl-5">
-                    {selectedCourse.technologies.map((lang, index) => (
-                      <li key={index}>{lang}</li>
-                    ))}
-                  </ul>                </div>
-
-                {/* Display course features */}
-                <div className="text-white">
-                  <strong className="text-yellow-500">Features: </strong>
-                  <ul className="list-disc pl-5">
-                    {selectedCourse.features.map((feature, index) => (
-                      <li key={index}>{feature}</li>
-                    ))}
-                  </ul>
-                </div>
-
-                <a
-                  href="https://wa.me/201023257791"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="py-3 px-6 mt-10 mx-auto bg-yellow-500 text-white font-semibold rounded-lg hover:bg-yellow-700 transition duration-300"
+                <button
+                  onClick={() => setSelectedCourse(null)}
+                  className="absolute right-5 top-5 bg-white p-1 w-10 rounded-md text-red-600 text-2xl z-[999]"
                 >
-                  Get it now
-                </a>
-              </div>
+                  &times;
+                </button>
+                <img
+                  src={selectedCourse.image}
+                  alt={selectedCourse.title}
+                  className="rounded-md mb-4 w-full h-[300px] object-cover"
+                />
+                <div className="flex flex-col items-start justify-start p-10">
+                  <h3 className="text-2xl text-start text-yellow-500 font-bold mb-2">
+                    {selectedCourse.title}
+                  </h3>
+                  <p className="text-white text-lg">{selectedCourse.description}</p>
+
+                  {/* Display taught languages */}
+                  <div className="text-white w-full text-start mb-4">
+                    <strong className="text-yellow-500">{t('courses.technologies_title')}:</strong>
+                    <ul className="list-disc pl-5">
+                      {selectedCourse.technologies.map((lang, index) => (
+                        <li key={index}>{lang}</li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  {/* Display course features */}
+                  <div className="text-white">
+                    <strong className="text-yellow-500">{t('courses.features_title')}:</strong>
+                    <ul className="list-disc pl-5">
+                      {selectedCourse.features.map((feature, index) => (
+                        <li key={index}>{feature}</li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <a
+                    href="https://wa.me/201023257791"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="py-3 px-6 mt-10 mx-auto bg-yellow-500 text-white font-semibold rounded-lg hover:bg-yellow-700 transition duration-300"
+                  >
+                    {t('hero.book_now')} {/* Dynamic translation */}
+                  </a>
+                </div>
+              </motion.div>
             </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+          )}
+        </AnimatePresence>
       </div>
     </section>
   );

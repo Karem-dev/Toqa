@@ -2,12 +2,14 @@ import { Disclosure } from '@headlessui/react';
 import { FaBars, FaWindowClose, FaGlobe } from 'react-icons/fa'; // استيراد الأيقونات
 import { useTranslation } from 'react-i18next'; // استيراد الـ hook لترجمة النصوص
 import { useLanguage } from '../context/LanguageContext'; // استيراد الـ context
+import { useAuth } from '../context/AuthContext';
+import { Link } from 'react-router-dom';
 
 const navigation = [
-  { name: 'home', href: '#hero', current: true },
-  { name: 'about', href: '#about', current: false },
-  { name: 'courses', href: '#courses', current: false },
-  { name: 'instructors', href: '#our', current: false },
+  { name: 'home', href: '/', current: true, path: '/' },
+  { name: 'about', href: '#about', current: false, path: '/' },
+  { name: 'courses', href: '#courses', current: false, path: '/' },
+  { name: 'instructors', href: '#our', current: false, path: '/' },
 ];
 
 function classNames(...classes) {
@@ -17,6 +19,8 @@ function classNames(...classes) {
 export default function Nav() {
   const { t } = useTranslation(); // استخدام الـ hook لجلب الترجمة
   const { language, switchLanguage } = useLanguage(); // استخدام الـ context لتغيير اللغة
+  const { isAuthenticated, user, logout } = useAuth();
+
 
   const handleLanguageSwitch = () => {
     const newLanguage = language === 'en' ? 'ar' : 'en';
@@ -32,18 +36,18 @@ export default function Nav() {
               {/* Logo */}
               <div className="flex items-center">
                 <div className="text-white text-xl font-bold logo">
-                  <a href="#">
-                  <a href="#" dangerouslySetInnerHTML={{ __html: t('navbar.logo') }} /> {/* الشعار مع <em> */}
-                  </a>
+                  <Link to={'/'}>
+                    <Link to={'/'} dangerouslySetInnerHTML={{ __html: t('navbar.logo') }} /> {/* الشعار مع <em> */}
+                  </Link>
                 </div>
               </div>
 
               {/* Desktop Menu */}
               <div className="hidden sm:flex items-center space-x-4 gap-3">
                 {navigation.map((item) => (
-                  <a
+                  <Link
                     key={item.name}
-                    href={item.href}
+                    to={item.href}
                     className={classNames(
                       item.current
                         ? 'bg-gray-900 text-white'
@@ -53,7 +57,7 @@ export default function Nav() {
                     aria-current={item.current ? 'page' : undefined}
                   >
                     {t(`navbar.${item.name}`)} {/* استخدام الترجمة */}
-                  </a>
+                  </Link>
                 ))}
 
                 {/* Language Switcher */}
@@ -64,6 +68,35 @@ export default function Nav() {
                   <FaGlobe className="mr-2" />
                   {language === 'en' ? 'AR' : 'الانجليزيه'}
                 </button>
+                {isAuthenticated ? (
+                  <div className="flex items-center gap-4">
+                    {user && (
+                      <span className="text-gray-300">{user.first_name}</span>
+                    )}
+                    <button
+                      onClick={logout}
+                      className="text-white py-2 px-4 rounded-md hover:bg-red-600"
+                    >
+                      {t('navbar.logout')}
+                    </button>
+                  </div>
+                ) : (
+                  <div>
+                    <Link
+                      to="/login"
+                      className="text-white py-2 px-4 rounded-md hover:bg-green-600"
+                    >
+                      {t('navbar.login')}
+                    </Link>
+                    {/* <Link
+                      to="/register"
+                      className="text-white py-2 px-4 rounded-md hover:bg-green-600"
+                    >
+                      {t('navbar.register')}
+                    </Link> */}
+                  </div>
+                )}
+
               </div>
 
               {/* Mobile Menu Button */}
@@ -108,6 +141,22 @@ export default function Nav() {
                 <FaGlobe className="mr-2" />
                 {language === 'en' ? 'English' : 'العربية'}
               </Disclosure.Button>
+              {isAuthenticated ? (
+                <Disclosure.Button
+                  onClick={logout}
+                  className="block  text-white py-2 px-4 rounded-md hover:bg-red-600"
+                >
+                  {t('navbar.logout')}
+                </Disclosure.Button>
+              ) : (
+                <Disclosure.Button
+                  as="a"
+                  href="/login"
+                  className="block  text-white py-2 px-4 rounded-md hover:bg-green-600"
+                >
+                  {t('navbar.login')}
+                </Disclosure.Button>
+              )}
             </div>
           </Disclosure.Panel>
         </>

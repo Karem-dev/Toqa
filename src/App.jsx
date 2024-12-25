@@ -1,47 +1,37 @@
-import React, { useState, useEffect } from "react";
+import  { useState, useEffect } from "react";
 import { gsap } from "gsap";
-import Nav from "./components/Nav";
-import Main from "./components/Main";
-import Featuerd from "./components/Featuerd";
-import WhyUsSection from "./components/Why";
-import ComingSoonSection from "./components/ComingSoonSection";
-import CoursesSection from "./components/CoursesSection";
-import AboutUs from "./components/About";
-import CourseModal from "./components/Instructors";
-import Contact from "./components/Contact";
-import Footer from "./components/Footer";
-import CustomerOpinionsSlider from "./components/Customers";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useLanguage } from "./context/LanguageContext";
-
+import Home from "./pages/Home";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
+import Nav from './components/Nav';
 
 function App() {
   const { language } = useLanguage();
-
-useEffect(() => {
-  document.documentElement.lang = language; // تحديث السمة lang في الـ HTML
-}, [language]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 3000); 
+    document.documentElement.lang = language; // Update the `lang` attribute
+  }, [language]);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setLoading(false), 3000);
 
     if (!loading) {
-      const tl = gsap.timeline();
-
-      tl.to(".content", { opacity: 1, duration: 1 }); 
+      gsap.to(".content", { opacity: 1, duration: 1 });
     }
 
     return () => clearTimeout(timer);
   }, [loading]);
-  
 
   return (
-    <>
+    <Router>
       {loading && (
         <div className="preloader">
           <div className="img">
             <img
-              src="/assets/images/1.png" 
+              src="/assets/images/1.png"
               alt="Toqa Academy"
               className="preloader-image"
             />
@@ -49,28 +39,24 @@ useEffect(() => {
           <div className="logo">
             <a href="#"><em>TOQ-A</em>-cademy</a>
           </div>
-<div className="textWrapper">
-  <p className="text">Loading...</p>
-  <div className="invertbox" />
-</div>
-
-
+          <div className="textWrapper">
+            <p className="text">Loading...</p>
+            <div className="invertbox" />
+          </div>
         </div>
       )}
       <div className="content">
-        <Nav />
-        <Main />
-        <Featuerd />
-        <AboutUs/>
-        {/* <WhyUsSection /> */}
-        <CoursesSection />
-        <CourseModal/>
-        <ComingSoonSection />
-        {/* <Contact/> */}
-        <CustomerOpinionsSlider/>
-         <Footer /> 
+      <Nav />
+
+        <Routes>
+          
+          <Route path="/" element={<Home />} />
+          <Route path="/Login" element={<Login />} />
+          <Route path="/Register" element={<Register />} />
+          {/* Add more routes as needed */}
+        </Routes>
       </div>
-    </>
+    </Router>
   );
 }
 

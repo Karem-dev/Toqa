@@ -11,6 +11,11 @@ const resources = {
         instructors: 'Our Instructors',
         language: 'English',
         logo: '<em>TOQ-A</em>-cademy',
+        login: 'Login',
+       logout: 'Logout',
+
+
+        register: 'Register',
       },
       hero: {
         welcome: 'Welcome we are ',
@@ -190,6 +195,10 @@ const resources = {
         instructors: 'مدربونا',
         language: 'العربية',
         logo: '<em>تقى</em>-اكاديمي',
+        login: 'تسجيل الدخول',
+       logout: 'تسجيل الخروج',
+
+        register: 'انشاء حساب'
       },
       hero: {
         welcome: 'مرحبًا بكم نحن ',

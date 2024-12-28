@@ -19,7 +19,7 @@ function Meeting() {
   }, []);
 
   if (loading) {
-    return <div className="text-center text-white mt-20">Loading...</div>;
+    return <div className="text-center text-white mt-20">Loading.....</div>;
   }
 
   const handleMeetingStart = () => {

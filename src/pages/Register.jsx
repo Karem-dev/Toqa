@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { useAuth } from "../context/AuthContext";
 
 function Register() {
   const [firstName, setFirstName] = useState("");
@@ -11,6 +12,12 @@ function Register() {
   const [error, setError] = useState(null);
   const [success, setSuccess] = useState(null);
   const navigate = useNavigate();
+  const {user}=useAuth();
+  if(user){
+      navigate('/'); 
+
+      
+  }
 
   const handleRegister = async (e) => {
     e.preventDefault();

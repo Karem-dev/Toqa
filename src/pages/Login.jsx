@@ -10,6 +10,12 @@ function Login() {
   const [error, setError] = useState(null);
   const navigate = useNavigate();
   const { login } = useAuth();
+  const { user } = useAuth();
+  if(user){
+      navigate('/profile'); 
+
+      
+  }
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -23,7 +29,7 @@ function Login() {
 
       if (response.data.success) {
         await login(response.data.token); // حفظ التوكن وجلب بيانات المستخدم
-        navigate("/");
+        navigate('/profile'); 
       } else {
         setError("Invalid credentials. Please try again.");
       }

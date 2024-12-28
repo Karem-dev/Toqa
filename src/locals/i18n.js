@@ -164,7 +164,7 @@ const resources = {
           bio: "Senior and supervisor of the teaching staff, Department of Physics"
         },
         instructor4: {
-          name: "jana mostafa",
+          name: "Jana  Mostafa",
           bio: "UI/UX developer, UI/UX designer, marketer"
         }
       },

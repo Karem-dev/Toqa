@@ -6,6 +6,9 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Nav from './components/Nav';
+import Profile from "./pages/Profile";
+import Meeting from "./pages/Meeting";
+
 
 function App() {
   const { language } = useLanguage();
@@ -53,6 +56,10 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/Login" element={<Login />} />
           <Route path="/Register" element={<Register />} />
+          <Route path="/Profile" element={<Profile />} />
+          <Route path="/meeting" element={<Meeting />} />
+          <Route path="*" element={<Home />} />
+
           {/* Add more routes as needed */}
         </Routes>
       </div>

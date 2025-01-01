@@ -8,6 +8,7 @@ import Register from "./pages/Register";
 import Nav from './components/Nav';
 import Profile from "./pages/Profile";
 import Meeting from "./pages/Meeting";
+import Game from "./pages/Game";
 
 
 function App() {
@@ -19,7 +20,7 @@ function App() {
   }, [language]);
 
   useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 3000);
+    const timer = setTimeout(() => setLoading(false), 10000);
 
     if (!loading) {
       gsap.to(".content", { opacity: 1, duration: 1 });
@@ -32,15 +33,17 @@ function App() {
     <Router>
       {loading && (
         <div className="preloader">
-          <div className="img">
-            <img
-              src="/assets/images/1.png"
-              alt="Toqa Academy"
-              className="preloader-image"
-            />
-          </div>
+      <div  className="w-full h-[80vh] scale-150">
+      <iframe
+        src="https://my.spline.design/macbookprocopy-6f5b687bf4c493274d3153167a4dfbfa/"
+        frameBorder="0"
+        width="100%"
+        height="100%"
+        title="MacBook Pro 3D"
+      ></iframe>
+    </div>
           <div className="logo">
-            <a href="#"><em>TOQ-A</em>-cademy</a>
+            <a href="#"><em>SCICODEA</em>-ACADEMY </a>
           </div>
           <div className="textWrapper">
             <p className="text">Loading...</p>
@@ -58,6 +61,7 @@ function App() {
           <Route path="/Register" element={<Register />} />
           <Route path="/Profile" element={<Profile />} />
           <Route path="/meeting" element={<Meeting />} />
+          <Route path="/game" element={<Game />} />
           <Route path="*" element={<Home />} />
 
           {/* Add more routes as needed */}

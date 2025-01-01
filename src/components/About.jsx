@@ -91,7 +91,7 @@ const AboutUs = () => {
             <img
               src="/assets/images/1.png"
               className="w-[70%] mx-auto xl:w-full rounded-xl shadow-lg clippath transform transition-all duration-500 hover:scale-105"
-              alt="Academy Image"
+              alt="A  Image"
             />
           </div>
         </div>

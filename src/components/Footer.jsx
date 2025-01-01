@@ -9,7 +9,7 @@ export default function Footer() {
           <div className="flex-1">
             <h3 className="text-lg font-semibold text-white mb-4">About Us</h3>
             <p className="text-sm">
-            Welcome to TOQ-A-CADEMy, a cutting-edge academy specializing in Computer Science and Science. We offer a comprehensive, innovative approach to education that empowers students to explore the fascinating realms of technology and science in a practical and engaging way
+            Welcome to SCI-CODEA- , a cutting-edge a  specializing in Computer SCI-CODEence and SCI-CODEence. We offer a comprehensive, innovative approach to education that empowers students to explore the faSCI-CODEnating realms of technology and SCI-CODEence in a practical and engaging way
             </p>
           </div>
 
@@ -78,7 +78,7 @@ export default function Footer() {
 
         {/* Copyright Section */}
         <div className="mt-8 border-t border-gray-700 pt-4 text-center text-sm">
-          © {new Date().getFullYear()} TOQ-A-CADEMY. All rights reserved.
+          © {new Date().getFullYear()} SCI-CODEA- . All rights reserved.
         </div>
       </div>
     </footer>

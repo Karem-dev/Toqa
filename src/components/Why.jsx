@@ -40,7 +40,7 @@ const WhyUsSection = () => {
     <section data-aos="fade-up"  className="section why-us  text-white py-12" id="section2">
     <div className="container mx-auto">
       <div className="section-heading text-center mb-8">
-        <h2 className="text-4xl font-semibold">Why choose ToQ-A-cademy</h2>
+        <h2 className="text-4xl font-semibold">Why choose SCI-CODEA- </h2>
       </div>
 
       <div className="tabs flex justify-center mb-6">

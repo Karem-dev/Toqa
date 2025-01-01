@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../context/AuthContext';
 
 function Meeting() {
   const [roomName, setRoomName] = useState('');
@@ -7,20 +8,26 @@ function Meeting() {
   const [isMeetingStarted, setIsMeetingStarted] = useState(false);
   const [loading, setLoading] = useState(true); 
   const navigate = useNavigate();
+  const { user,role } = useAuth();
 
   useEffect(() => {
+    
     const user = JSON.parse(localStorage.getItem('user'));
     if (user) {
       setusername(user.first_name + ' ' + user.last_name);
     } else {
-      setusername("Toqa academy");
+      setusername("Toqa a ");
     }
     setLoading(false);
   }, []);
+  
+
 
   if (loading) {
     return <div className="text-center text-white mt-20">Loading.....</div>;
   }
+
+
 
   const handleMeetingStart = () => {
     const newRoomName = 'Room-' + username + '-' + Date.now();
@@ -33,6 +40,11 @@ function Meeting() {
     setRoomName('');
     setIsMeetingStarted(false);
   };
+
+    // if (role!== '1') {
+  //   navigate('/');
+  //   return null;
+  // }
 
   return (
     <div className="mt-52 text-white text-center font-extrabold">

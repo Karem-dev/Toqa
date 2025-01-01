@@ -10,9 +10,10 @@ const resources = {
         courses: 'Courses',
         instructors: 'Our Instructors',
         language: 'English',
-        logo: '<em>TOQ-A</em>-cademy',
+        logo: '<em>SCI</em>CODE ',
         login: 'Login',
        logout: 'Logout',
+       game: 'game',
 
 
         register: 'Register',
@@ -22,7 +23,7 @@ const resources = {
         book_now: 'Book Now',
         contact_us: 'Contact Us',
         discover_more: 'Discover more',
-        company_name: "<em>TOQ-A</em>-cademy"
+        company_name: "<em>SCI</em>CODE<em> Academy</em> "
       },
       featured: {
         card1_title: "All Courses",
@@ -39,27 +40,27 @@ const resources = {
         offer_title: 'What We Offer',
         offer_description: 'Explore a variety of programs in Computer Science and Science.',
         offer_list: [
-          "Computer Science Programs: Learn everything from programming basics to advanced fields like AI, machine learning, and data science.",
-          "Science Programs: Explore classical mechanics, quantum science, and more, preparing students for careers in research and engineering."
+          "Computer Science Programs: Learn everything from programming basics to advanced fields like AI, machine learning, and data Science.",
+          "Science Programs: Explore classical mechanics, quantum Science, and more, preparing students for careers in research and engineering."
         ]
       },
       courses: {
         heading: 'Our Courses',
-        description: 'Discover our courses that cover a wide range of topics, including science fundamentals, programming basics, frontend development, backend development, and more!',
+        description: 'Discover our courses that cover a wide range of topics, including Science fundamentals, programming basics, frontend development, backend development, and more!',
         course1: {
           title: "Science Fundamentals",
-          description: "Master the basics of science with this comprehensive course, covering topics from classical mechanics to modern science principles.",
+          description: "Master the basics of Science with this comprehensive course, covering topics from classical mechanics to modern Science principles.",
           technologies: [
             "Classical Mechanics",
             "Electromagnetism",
-            "Quantum science",
+            "Quantum Science",
             "Relativity"
           ],
           features: [
-            "In-depth explanations of fundamental science concepts.",
+            "In-depth explanations of fundamental Science concepts.",
             "Hands-on experiments and simulations.",
             "Quizzes to test your understanding.",
-            "Access to a community of science enthusiasts."
+            "Access to a community of Science enthusiasts."
           ]
         },
         course2: {
@@ -149,7 +150,7 @@ const resources = {
       },
       instructors: {
         heading: 'Our Instructors',
-        description: 'Meet our experienced instructors who are passionate about teaching and helping students succeed in their computer science and science programs.',
+        description: 'Meet our experienced instructors who are passionate about teaching and helping students succeed in their computer Science and Science programs.',
        showcv:" show cv",
         instructor1: {
           name: "Karem Mahmoud",
@@ -194,9 +195,10 @@ const resources = {
         courses: 'الدورات',
         instructors: 'مدربونا',
         language: 'العربية',
-        logo: '<em>تقى</em>-اكاديمي',
+        logo: '<em>ساي</em>-كود',
         login: 'تسجيل الدخول',
        logout: 'تسجيل الخروج',
+       game: ' اللعبة',
 
         register: 'انشاء حساب'
       },
@@ -205,7 +207,7 @@ const resources = {
         book_now: 'احجز الآن',
         contact_us: 'اتصل بنا',
         discover_more: 'اكتشف المزيد',
-        company_name: "<em>تقى</em>-اكاديمي"
+        company_name: "  اكاديمية <em>ساي</em>-كود"
       },
       featured: {
         card1_title: "جميع الدورات",

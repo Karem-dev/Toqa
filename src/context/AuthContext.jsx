@@ -8,6 +8,7 @@ export const useAuth = () => useContext(AuthContext);
 export const AuthProvider = ({ children }) => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [user, setUser] = useState(null);
+  const [role, setrole] = useState(null);
 
   const login = async (token) => {
     localStorage.setItem("auth_token", token);
@@ -22,6 +23,9 @@ export const AuthProvider = ({ children }) => {
       });
       setUser(response.data); // تخزين بيانات المستخدم
       console.log(response.data);
+
+      setrole(response.data.role);
+      console.log(response.data.role);
       localStorage.setItem("user", JSON.stringify(response.data));
 
     } catch (error) {
@@ -45,7 +49,7 @@ export const AuthProvider = ({ children }) => {
   }, []);
 
   return (
-    <AuthContext.Provider value={{ isAuthenticated, user, login, logout }}>
+    <AuthContext.Provider value={{ isAuthenticated, user, login, logout,role }}>
       {children}
     </AuthContext.Provider>
   );

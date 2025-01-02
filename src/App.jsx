@@ -9,6 +9,7 @@ import Nav from './components/Nav';
 import Profile from "./pages/Profile";
 import Meeting from "./pages/Meeting";
 import Game from "./pages/Game";
+import Spline from "@splinetool/react-spline";
 
 
 function App() {
@@ -34,13 +35,9 @@ function App() {
       {loading && (
         <div className="preloader">
       <div  className="w-full h-[80vh] scale-150">
-      <iframe
-        src="https://my.spline.design/macbookprocopy-6f5b687bf4c493274d3153167a4dfbfa/"
-        frameBorder="0"
-        width="100%"
-        height="100%"
-        title="MacBook Pro 3D"
-      ></iframe>
+      <Spline
+        scene="https://prod.spline.design/wN1VWrOeyY2csqq9/scene.splinecode"
+      />
     </div>
           <div className="logo">
             <a href="#"><em>SCICODEA</em>-ACADEMY </a>

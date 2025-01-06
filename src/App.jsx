@@ -35,9 +35,9 @@ function App() {
       {loading && (
         <div className="preloader">
       <div  className="w-full h-[80vh] scale-150">
-      <Spline
+      {/* <Spline
         scene="https://prod.spline.design/wN1VWrOeyY2csqq9/scene.splinecode"
-      />
+      /> */}
     </div>
           <div className="logo">
             <a href="#"><em>SCICODEA</em>-ACADEMY </a>

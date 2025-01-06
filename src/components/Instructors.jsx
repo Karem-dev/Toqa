@@ -19,16 +19,6 @@ const TeacherSlider = () => {
     },
     {
       id: 2,
-      name: t('instructors.instructor2.name'),
-      image: '/assets/images/shady.png',
-      bio: t('instructors.instructor2.bio'),
-      linkedin: 'https://www.linkedin.com/in/shady-mahmoud-600321293/',
-      github: 'https://github.com/Shady-Mahmoud9',
-      website: 'https://shady-portfolio-gamma.vercel.app/',
-      cv: '/assets/cvs/Shady-Mahmoud-Abdelkader-FlowCV-Resume-20241220 (1).pdf',
-    },
-    {
-      id: 3,
       name: t('instructors.instructor3.name'),
       image: '/assets/images/mohamed.png',
       bio: t('instructors.instructor3.bio'),
@@ -37,6 +27,17 @@ const TeacherSlider = () => {
       website: null,
       cv: '/assets/cvs/Mohamed Abd ELsamea-CV.pdf',
     },
+    {
+      id: 3,
+      name: t('instructors.instructor2.name'),
+      image: '/assets/images/shady.png',
+      bio: t('instructors.instructor2.bio'),
+      linkedin: 'https://www.linkedin.com/in/shady-mahmoud-600321293/',
+      github: 'https://github.com/Shady-Mahmoud9',
+      website: 'https://shady-portfolio-gamma.vercel.app/',
+      cv: '/assets/cvs/Shady-Mahmoud-Abdelkader-FlowCV-Resume-20241220 (1).pdf',
+    },
+ 
     {
       id: 4,
       name: t('instructors.instructor4.name'),

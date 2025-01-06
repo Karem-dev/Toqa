@@ -89,16 +89,16 @@ const AboutUs = () => {
           </div>
 
           <div data-aos="fade-up" className="w-full xl:w-[40%] flex items-start justify-center">
-            {/* <img
-              src="/assets/images/1.png"
+            <img
+              src="/assets/images/logo.png"
               className="w-[70%] mx-auto xl:w-full rounded-xl shadow-lg clippath transform transition-all duration-500 hover:scale-105"
               alt="A  Image"
-            /> */}
-           <div  className="w-full h-full scale-150">
+            />
+           {/* <div  className="w-full h-full scale-150">
            <Spline
         scene="https://prod.spline.design/wN1VWrOeyY2csqq9/scene.splinecode"
       />
-    </div>
+    </div> */}
           </div>
         </div>
       </div>

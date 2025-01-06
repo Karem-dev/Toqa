@@ -34,13 +34,13 @@ function App() {
     <Router>
       {loading && (
         <div className="preloader">
-      <div  className="w-full h-[80vh] scale-150">
-      {/* <Spline
-        scene="https://prod.spline.design/wN1VWrOeyY2csqq9/scene.splinecode"
-      /> */}
+        <div className="preloader-image 
+ felx items-center justify-center w-full h-[50%]  ">
+          <img src="/assets/images/logo.png " className="rounded-full" alt="" />
+  
     </div>
           <div className="logo">
-            <a href="#"><em>SCICODEA</em>-ACADEMY </a>
+            <a href="#"><em>SCICODE</em>-ACADEMY </a>
           </div>
           <div className="textWrapper">
             <p className="text">Loading...</p>

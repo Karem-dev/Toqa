@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useAuth } from "../context/AuthContext";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import Nav from "../components/Nav";
 
 const Profile = () => {
   axios.defaults.baseURL = "http://localhost:8000";
@@ -15,7 +16,7 @@ const Profile = () => {
     email: user?.email || "",
     image: user?.image || "",
   });
-  const { logout  } = useAuth();
+  const { logout } = useAuth();
 
   useEffect(() => {
     if (!user) {
@@ -45,7 +46,8 @@ const Profile = () => {
     }
 
     try {
-      const response = await axios.post("/api/user/update", formDataToSubmit, {
+      // Change from POST to PUT or PATCH based on the backend setup
+      const response = await axios.patch("/api/user", formDataToSubmit, {
         headers: {
           "Content-Type": "multipart/form-data",
           Accept: "application/json",
@@ -63,6 +65,8 @@ const Profile = () => {
   if (!user) return null;
 
   return (
+    <>
+    <Nav/>
     <div className="profile-page bg-[url('/assets/images/bg.jpg')] bg-cover min-h-screen flex justify-center items-center p-4 backdrop-blur-md">
       <div className="profile-card bg-gradient-to-r from-slate-800 via-gray-900 to-slate-700 backdrop-blur-lg shadow-xl rounded-lg p-8 w-full md:w-[60%] max-w-xl h-auto flex items-center justify-center flex-col space-y-6">
         {isEditing ? (
@@ -116,7 +120,6 @@ const Profile = () => {
         ) : (
           <>
             <div className="w-48 h-48 bg-white rounded-full flex items-center ">
-              {" "}
               <img
                 src={
                   user?.image
@@ -144,7 +147,7 @@ const Profile = () => {
             </h1>
             <p className="text-white text-lg mt-2">Email: {user.email}</p>
             <p className="text-white text-lg mt-2">
-              Role: {user.role === "2" ? "User" : "Admin"}
+              Role: {user.role == 2 ? "User" : "Admin"}
             </p>
             <div className="mt-6">
               <button
@@ -158,6 +161,7 @@ const Profile = () => {
         )}
       </div>
     </div>
+    </>
   );
 };
 

@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { Navigate, useNavigate } from "react-router-dom";
-import { useAuth } from "../context/AuthContext";
+import { useNavigate } from "react-router-dom";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css"; // Import toastify styles
 
 function Register() {
   const [firstName, setFirstName] = useState("");
@@ -12,7 +13,7 @@ function Register() {
   const [image, setImage] = useState(null);
   const [error, setError] = useState(null);
   const [success, setSuccess] = useState(null);
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(false);
   
   const navigate = useNavigate();
 
@@ -24,6 +25,7 @@ function Register() {
   
     if (password !== confirmPassword) {
       setError("Passwords do not match.");
+      toast.error("Passwords do not match."); // Show error toast
       setLoading(false);
       return;
     }
@@ -55,18 +57,19 @@ function Register() {
         setPassword("");
         setConfirmPassword("");
         setImage(null);
+        toast.success("Account created successfully!"); // Show success toast
         navigate('/login');
         
-        // You can handle successful registration here
-        // For example, store the token:
         if (data.token) {
           localStorage.setItem('token', data.token);
         }
       } else {
         setError(data.message || "Registration failed");
+        toast.error(data.message || "Registration failed"); // Show error toast
       }
     } catch (err) {
       setError("Something went wrong. Please try again.");
+      toast.error("Something went wrong. Please try again."); // Show error toast
     } finally {
       setLoading(false);
     }
@@ -76,6 +79,7 @@ function Register() {
     const file = e.target.files[0];
     if (file && file.size > 2048000) {
       setError("Image size should be less than 2MB");
+      toast.error("Image size should be less than 2MB"); // Show error toast
       return;
     }
     setImage(file);
@@ -186,6 +190,7 @@ function Register() {
           </a>
         </p>
       </div>
+      <ToastContainer />
     </div>
   );
 }

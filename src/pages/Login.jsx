@@ -1,20 +1,22 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
+import { toast, ToastContainer } from "react-toastify"; // استيراد ToastContainer و toast
+import "react-toastify/dist/ReactToastify.css"; // استيراد الـ CSS الخاص بـ Toastify
+import Nav from "../components/Nav";
 
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null);
   const navigate = useNavigate();
-  const { login } = useAuth();
-  const { user } = useAuth();
-  if(user){
-      navigate('/profile'); 
+  const { login, user } = useAuth();
 
-      
+  // إعادة التوجيه إذا كان المستخدم قد سجل الدخول بالفعل
+  if (user) {
+    navigate("/profile");
+    return null; // منع عرض النموذج إذا كان المستخدم قد سجل الدخول
   }
 
   const handleLogin = async (e) => {
@@ -29,19 +31,24 @@ function Login() {
 
       if (response.data.success) {
         await login(response.data.token); // حفظ التوكن وجلب بيانات المستخدم
-        navigate('/profile'); 
+        toast.success("Login successful!"); // عرض توست للنجاح
+        navigate("/profile");
       } else {
+        toast.error(response.data.message || "Login failed"); // عرض توست للخطأ
         setError("Invalid credentials. Please try again.");
       }
     } catch (err) {
-      setError(err.response?.data?.message || "Something went wrong.");
+      toast.error(err.response?.data?.message || "Something went wrong."); // عرض توست للخطأ
+      setError("Something went wrong.");
     }
   };
-  
 
   return (
+    <>
+    <Nav/>
+    
     <div className="min-h-screen flex items-center justify-center bg-[url('/assets/images/bg.jpg')]">
-      <div className="bg-[url('/assets/images/bg.jpg')]  p-8 rounded-lg shadow-xl  border border-slate-500 shadow-gray-600 w-full max-w-md">
+      <div className="bg-[url('/assets/images/bg.jpg')] p-8 rounded-lg shadow-xl border border-slate-500 shadow-gray-600 w-full max-w-md">
         <h2 className="text-2xl font-bold text-white text-center mb-6">Login</h2>
         <form onSubmit={handleLogin}>
           <div className="mb-4">
@@ -85,7 +92,9 @@ function Login() {
           </Link>
         </p>
       </div>
+      <ToastContainer /> {/* تأكد من أن ToastContainer داخل JSX */}
     </div>
+    </>
   );
 }
 

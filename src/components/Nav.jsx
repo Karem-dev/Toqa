@@ -72,12 +72,7 @@ export default function Nav() {
                       </Link>
                     ) 
                     }
-                    {/* <button
-                      onClick={logout}
-                      className="text-white py-2 px-4 rounded-md hover:bg-red-600"
-                    >
-                      {t('navbar.logout')}
-                    </button> */}
+                  
                   </div>
                 ) : (
                   <div>
@@ -97,10 +92,10 @@ export default function Nav() {
                 )}
 
                 {/* Language Switcher */}
-                {role === "1" ? (
+                {user&& user.role == 1 ? (
                   <>
-                    <Link className="text-gray-300 gap-2  hover:text-white hover:bg-gray-700 rounded-md px-3 py-2 text-sm font-medium flex items-center">
-                      dahsboard
+                    <Link to="/dashboard/dash" className="text-gray-300 gap-2  hover:text-white hover:bg-gray-700 rounded-md px-3 py-2 text-sm font-medium flex items-center">
+                      {t('navbar.dashboard')}
                     </Link>
                   </>
                 ) : null}

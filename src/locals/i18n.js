@@ -14,6 +14,7 @@ const resources = {
         login: 'Login',
        logout: 'Logout',
        game: 'game',
+       dashboard:"Dashboard",
 
 
         register: 'Register',
@@ -183,7 +184,10 @@ const resources = {
       },
       rating:{
         heading:"rating",
-        description:"look at our rating" 
+        description:"look at our rating",
+        delete:"delete", 
+        placeholder:"placeholder",
+        submit:"submit"
       }
     }
   },
@@ -199,6 +203,7 @@ const resources = {
         login: 'تسجيل الدخول',
        logout: 'تسجيل الخروج',
        game: ' اللعبة',
+       dashboard: 'لوحة التحكم',
 
         register: 'انشاء حساب'
       },
@@ -367,9 +372,20 @@ const resources = {
       },
       rating:{
         heading:"تقيماتنا",
-        description:"انظر حول تقيماتنا" 
+        description:"انظر حول تقيماتنا" ,
+        delete:"حذف",
+        placeholder:"اترك لنا رساله",
+        submit:"ارسل",
+        average:"متوسط",
+        total:"المجموع",
+        reviews:"التعليقات",
+        stars:"النجوم",
       }
     }
+
+    
+
+
   }
 };
 

@@ -2416,3 +2416,7 @@ html[xmlns] .flexslider .slides {
 
   
 }
+.active{
+  background-color: #ff5c0b;
+  color: #fff;
+}

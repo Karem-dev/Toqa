@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
+import Nav from '../components/Nav';
 
 function Meeting() {
   const [roomName, setRoomName] = useState('');
@@ -47,6 +48,8 @@ function Meeting() {
   // }
 
   return (
+    <>
+    <Nav/>
     <div className="mt-52 text-white text-center font-extrabold">
       <h1>Meeting Dashboard</h1>
       {!isMeetingStarted ? (
@@ -74,6 +77,8 @@ function Meeting() {
         </>
       )}
     </div>
+    </>
+
   );
 }
 

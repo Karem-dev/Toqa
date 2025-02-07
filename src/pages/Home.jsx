@@ -11,7 +11,7 @@ function Home() {
   return (
     <>
     <Nav/>
-      <Main />
+      <Main  />
       <Featuerd />
       <AboutUs />
       {/* <WhyUsSection /> */}

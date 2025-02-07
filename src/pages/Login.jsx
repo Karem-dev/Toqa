@@ -45,7 +45,7 @@ function Login() {
 
   return (
     <>
-    <Nav/>
+    {/* <Nav/> */}
     
     <div className="min-h-screen flex items-center justify-center bg-[url('/assets/images/bg.jpg')]">
       <div className="bg-[url('/assets/images/bg.jpg')] p-8 rounded-lg shadow-xl border border-slate-500 shadow-gray-600 w-full max-w-md">

@@ -66,7 +66,7 @@ const Profile = () => {
 
   return (
     <>
-    <Nav/>
+    {/* <Nav/> */}
     <div className="profile-page bg-[url('/assets/images/bg.jpg')] bg-cover min-h-screen flex justify-center items-center p-4 backdrop-blur-md">
       <div className="profile-card bg-gradient-to-r from-slate-800 via-gray-900 to-slate-700 backdrop-blur-lg shadow-xl rounded-lg p-8 w-full md:w-[60%] max-w-xl h-auto flex items-center justify-center flex-col space-y-6">
         {isEditing ? (

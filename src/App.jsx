@@ -14,6 +14,7 @@ import DashProfile from "./pages/dashboard/pages/Profile";
 import Profile from "./pages/Profile";
 import { useLanguage } from "./context/LanguageContext";
 import DashboardComments from "./pages/dashboard/pages/DashboardComments";
+import UserManagement from "./pages/dashboard/pages/UserManagement";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -53,6 +54,8 @@ useEffect(() => {
             <Route path="comments" element={<DashboardComments />} />
           </Route>
           <Route path="/profile" element={<Profile />} />
+          <Route path="/usermanegment" element={<UserManagement />} />
+
           <Route path="*" element={<Home />} />
         </Routes>
       </div>

@@ -10,7 +10,7 @@ const navigation = [
   { name: "home", href: "/", current: true, path: "/" },
   { name: "about", href: "/#about", current: false, path: "/" },
   { name: "courses", href: "/#courses", current: false, path: "/" },
-  { name: "instructors", href: "/#our", current: false, path: "/" },
+  { name: "instructors", href: "/#ourInstructors", current: false, path: "/" },
   // { name: "game", href: "/game", current: false, path: "/game" },
 ];
 
@@ -74,7 +74,7 @@ export default function Nav() {
                 ))}
 
                 {/* Login/Profile */}
-                {isAuthenticated ? (
+                {/* {isAuthenticated ? (
                   <Link to="/profile" className="text-gray-300 hover:text-white">
                     {user?.first_name}
                   </Link>
@@ -85,7 +85,7 @@ export default function Nav() {
                   >
                     {t("navbar.login")}
                   </Link>
-                )}
+                )} */}
 
                 {/* Language Toggle */}
                 <button
@@ -133,7 +133,7 @@ export default function Nav() {
               ))}
               
               {/* Mobile Login/Profile */}
-              {isAuthenticated ? (
+              {/* {isAuthenticated ? (
                 <Disclosure.Button
                   as={Link}
                   to="/profile"
@@ -149,7 +149,7 @@ export default function Nav() {
                 >
                   {t("navbar.login")}
                 </Disclosure.Button>
-              )}
+              )} */}
 
               {/* Mobile Language Toggle */}
               <Disclosure.Button

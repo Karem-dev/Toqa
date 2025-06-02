@@ -12,7 +12,7 @@ function Login() {
   const [error, setError] = useState(null);
   const navigate = useNavigate();
   const { login, user } = useAuth();
-
+  const [loading,setloading]=useState(false)
   // إعادة التوجيه إذا كان المستخدم قد سجل الدخول بالفعل
   if (user) {
     navigate("/profile");
@@ -28,14 +28,17 @@ function Login() {
         email,
         password,
       });
+      setloading(true); // تحميل المتصفح
 
       if (response.data.success) {
         await login(response.data.token); // حفظ التوكن وجلب بيانات المستخدم
         toast.success("Login successful!"); // عرض توست للنجاح
-        navigate("/profile");
+        navigate("/");
+        setloading(false); // قطع التحميل
       } else {
         toast.error(response.data.message || "Login failed"); // عرض توست للخطأ
         setError("Invalid credentials. Please try again.");
+        setloading(false); // قطع التحميل
       }
     } catch (err) {
       toast.error(err.response?.data?.message || "Something went wrong."); // عرض توست للخطأ
@@ -82,7 +85,7 @@ function Login() {
             type="submit"
             className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
           >
-            Login
+            {loading ? "loading" : "Login" }
           </button>
         </form>
         <p className="mt-4 text-center text-gray-600 text-sm">

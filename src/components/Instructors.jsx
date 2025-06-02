@@ -51,7 +51,7 @@ const TeacherSlider = () => {
   ];
 
   return (
-    <div className="w-full max-w-7xl mx-auto py-16 px-4" id="Our">
+    <div className="w-full max-w-7xl mx-auto py-16 px-4" id="OurInstructors">
       <h1 className="text-3xl font-bold text-white hover:text-[#f5a425] mb-8 text-center m-20">
         {t('instructors.heading')}
       </h1>

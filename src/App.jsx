@@ -45,16 +45,16 @@ useEffect(() => {
       <div className="content opacity-0 transition-opacity duration-1000">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/dashboard" element={<Dashboard />}>
-            <Route path="users" element={<Users />} />
-            <Route path="dash" element={<Main />} />
-            <Route path="profile" element={<DashProfile />} />
-            <Route path="comments" element={<DashboardComments />} />
-          </Route>
-          <Route path="/profile" element={<Profile />} />
-          <Route path="/usermanegment" element={<UserManagement />} />
+          {/* <Route path="/login" element={<Login />} /> */}
+          {/* <Route path="/register" element={<Register />} /> */}
+          {/* <Route path="/dashboard" element={<Dashboard />}> */}
+            {/* <Route path="users" element={<Users />} /> */}
+            {/* <Route path="dash" element={<Main />} /> */}
+            {/* <Route path="profile" element={<DashProfile />} /> */}
+            {/* <Route path="comments" element={<DashboardComments />} /> */}
+          {/* </Route> */}
+          {/* <Route path="/profile" element={<Profile />} /> */}
+          {/* <Route path="/usermanegment" element={<UserManagement />} /> */}
 
           <Route path="*" element={<Home />} />
         </Routes>

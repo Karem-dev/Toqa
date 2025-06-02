@@ -16,7 +16,7 @@ function Home() {
       <AboutUs />
       {/* <WhyUsSection /> */}
       <CoursesSection />
-      <TeacherSlider />
+      <TeacherSlider  />
       <ComingSoonSection />
       {/* <Contact/> */}
       <CustomerOpinionsSlider />

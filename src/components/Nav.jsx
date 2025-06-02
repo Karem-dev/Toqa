@@ -73,19 +73,7 @@ export default function Nav() {
                   </Link>
                 ))}
 
-                {/* Login/Profile */}
-                {/* {isAuthenticated ? (
-                  <Link to="/profile" className="text-gray-300 hover:text-white">
-                    {user?.first_name}
-                  </Link>
-                ) : (
-                  <Link
-                    to="/login"
-                    className="text-white py-2 px-4 rounded-md hover:bg-green-600"
-                  >
-                    {t("navbar.login")}
-                  </Link>
-                )} */}
+           
 
                 {/* Language Toggle */}
                 <button
@@ -132,24 +120,7 @@ export default function Nav() {
                 </Disclosure.Button>
               ))}
               
-              {/* Mobile Login/Profile */}
-              {/* {isAuthenticated ? (
-                <Disclosure.Button
-                  as={Link}
-                  to="/profile"
-                  className="text-gray-300 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
-                >
-                  {user?.first_name}
-                </Disclosure.Button>
-              ) : (
-                <Disclosure.Button
-                  as={Link}
-                  to="/login"
-                  className="text-white block rounded-md px-3 py-2 text-base font-medium bg-green-600 hover:bg-green-700"
-                >
-                  {t("navbar.login")}
-                </Disclosure.Button>
-              )} */}
+      
 
               {/* Mobile Language Toggle */}
               <Disclosure.Button

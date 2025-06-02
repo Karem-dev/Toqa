@@ -31,7 +31,7 @@ export default function Nav() {
       const sectionId = item.href.replace("/#", "");
 
       if (location.pathname !== "/") {
-        navigate(`/${item.href}`); // إعادة التوجيه للصفحة الرئيسية أولًا
+        navigate(`/${item.href}`);
       } else {
         const section = document.getElementById(sectionId);
         if (section) {
@@ -45,19 +45,16 @@ export default function Nav() {
     <Disclosure as="nav" className="bg-gray-800 fixed top-0 w-full z-[9999]">
       {({ open }) => (
         <>
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 ">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="flex h-16 items-center justify-between">
-              {/* الشعار */}
+              {/* Logo */}
               <div className="text-white text-xl font-bold logo">
-              <Link to={"/"}>
-                    <Link
-                      to={"/"}
-                      dangerouslySetInnerHTML={{ __html: t("navbar.logo") }}
-                    />{" "}
-                    {/* الشعار مع <em> */}
-                  </Link>              </div>
+                <Link to="/">
+                  <span dangerouslySetInnerHTML={{ __html: t("navbar.logo") }} />
+                </Link>
+              </div>
 
-              {/* القائمة العلوية */}
+              {/* Desktop Navigation */}
               <div className="hidden sm:flex items-center space-x-4 gap-3">
                 {navigation.map((item) => (
                   <Link
@@ -76,9 +73,9 @@ export default function Nav() {
                   </Link>
                 ))}
 
-                {/* تسجيل الدخول أو الحساب */}
+                {/* Login/Profile */}
                 {isAuthenticated ? (
-                  <Link to="/profile" className="text-gray-300">
+                  <Link to="/profile" className="text-gray-300 hover:text-white">
                     {user?.first_name}
                   </Link>
                 ) : (
@@ -90,7 +87,7 @@ export default function Nav() {
                   </Link>
                 )}
 
-                {/* زر تغيير اللغة */}
+                {/* Language Toggle */}
                 <button
                   onClick={() => switchLanguage(language === "en" ? "ar" : "en")}
                   className="text-gray-300 hover:text-white hover:bg-gray-700 rounded-md px-3 py-2 text-sm font-medium flex items-center"
@@ -100,7 +97,7 @@ export default function Nav() {
                 </button>
               </div>
 
-              {/* زر القائمة الجانبية للهاتف */}
+              {/* Mobile menu button */}
               <div className="sm:hidden flex items-center">
                 <Disclosure.Button className="text-gray-400 hover:text-white hover:bg-gray-700 border-none outline-none">
                   <span className="sr-only">Open main menu</span>
@@ -113,6 +110,60 @@ export default function Nav() {
               </div>
             </div>
           </div>
+
+          {/* Mobile menu */}
+          <Disclosure.Panel className="sm:hidden">
+            <div className="space-y-1 px-2 pb-3 pt-2">
+              {navigation.map((item) => (
+                <Disclosure.Button
+                  key={item.name}
+                  as={Link}
+                  to={item.href}
+                  onClick={(e) => handleNavigation(e, item)}
+                  className={classNames(
+                    item.current
+                      ? "bg-gray-900 text-white"
+                      : "text-gray-300 hover:bg-gray-700 hover:text-white",
+                    "block rounded-md px-3 py-2 text-base font-medium"
+                  )}
+                  aria-current={item.current ? "page" : undefined}
+                >
+                  {t(`navbar.${item.name}`)}
+                </Disclosure.Button>
+              ))}
+              
+              {/* Mobile Login/Profile */}
+              {isAuthenticated ? (
+                <Disclosure.Button
+                  as={Link}
+                  to="/profile"
+                  className="text-gray-300 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
+                >
+                  {user?.first_name}
+                </Disclosure.Button>
+              ) : (
+                <Disclosure.Button
+                  as={Link}
+                  to="/login"
+                  className="text-white block rounded-md px-3 py-2 text-base font-medium bg-green-600 hover:bg-green-700"
+                >
+                  {t("navbar.login")}
+                </Disclosure.Button>
+              )}
+
+              {/* Mobile Language Toggle */}
+              <Disclosure.Button
+                as="button"
+                onClick={() => switchLanguage(language === "en" ? "ar" : "en")}
+                className="text-gray-300 hover:text-white block w-full text-left rounded-md px-3 py-2 text-base font-medium"
+              >
+                <div className="flex items-center">
+                  <FaGlobe className="mr-2" />
+                  {language === "en" ? "AR" : "EN"}
+                </div>
+              </Disclosure.Button>
+            </div>
+          </Disclosure.Panel>
         </>
       )}
     </Disclosure>
